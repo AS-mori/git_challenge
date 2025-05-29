@@ -1,0 +1,30 @@
+asamac@AsMac git_tutorial % mkdir git_challenge
+asamac@AsMac git_tutorial % cd git_challenge
+asamac@AsMac git_challenge % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/asamac/git_tutorial/git_challenge/.git/
+asamac@AsMac git_challenge % touch hello_world.txt
+asamac@AsMac git_challenge % git branch -m main
+asamac@AsMac git_challenge % echo 'Hello, World!' >> hello_world.txt
+asamac@AsMac git_challenge % git add hello_world.txt
+asamac@AsMac git_challenge % git commit -m 'Hello, World!を追記'
+[main (root-commit) 1f57b51] Hello, World!を追記
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+asamac@AsMac git_challenge % echo "こんにちは、世界！" >> hello_world.txt
+asamac@AsMac git_challenge % git add hello_world.txt
+asamac@AsMac git_challenge % git commit -m "こんにちは、世界！を追記"
+[main 7b11f3c] こんにちは、世界！を追記
+ 1 file changed, 1 insertion(+)
+asamac@AsMac git_challenge % git log --oneline
+7b11f3c (HEAD -> main) こんにちは、世界！を追記
+1f57b51 Hello, World!を追記
